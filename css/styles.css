@@ -28,7 +28,8 @@ p {
   margin-bottom: 0;
 }
 
-ul {
+ul,
+ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -118,6 +119,10 @@ img {
   color: var(--accent-pressed);
 }
 
+.container-nav {
+  padding: 0;
+}
+
 /* Contacts */
 
 .site-contacts {
@@ -202,23 +207,24 @@ img {
 .features-container {
   display: flex;
   flex-shrink: 0;
+  padding: 0;
 }
 
 .features-section {
   text-align: left;
-  margin: 120px 0;
+  margin-top: 120px;
 }
 
 .features-list.features-list-item {
   width: 264px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
 }
 
 .features-list {
   display: flex;
   width: calc((100%-72) / 4);
+  gap: 24px;
 }
 
 .card-title {
@@ -250,6 +256,7 @@ img {
   color: var(--color-main-text);
   text-align: center;
   padding-bottom: 72px;
+  padding-top: 0;
 }
 
 .activity-list {
@@ -264,6 +271,10 @@ img {
 
 .section-activity {
   margin-bottom: 120px;
+}
+
+.activity-container {
+  padding: 0;
 }
 
 /* Our Team */
@@ -313,6 +324,9 @@ img {
   color: var(--color-secondary-text);
   text-align: center;
   padding-bottom: 32px;
+}
+.team-container {
+  padding: 0;
 }
 
 /**
@@ -365,6 +379,7 @@ img {
   display: flex;
   gap: 24px;
   justify-content: center;
+  padding-bottom: 72px;
 }
 
 .portfolio-tabs {
@@ -381,8 +396,6 @@ img {
   align-items: center;
   border-radius: 4px;
   border: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
-    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .section-portfolio .portfolio-tabs:hover {
@@ -398,6 +411,7 @@ img {
 .portfolio-container {
   margin-top: 96px;
   margin-bottom: 120px;
+  padding: 0;
 }
 
 /*  Galery */
@@ -409,6 +423,8 @@ img {
   letter-spacing: 0.02em;
   color: var(--color-main-text);
   padding: 32px 0 8px 16px;
+  border-right: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
 }
 
 .galery-text {
@@ -418,6 +434,9 @@ img {
   color: var(--color-secondary-text);
   padding-bottom: 32px;
   padding-left: 16px;
+  border-right: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .portfolio-galery {
@@ -425,11 +444,8 @@ img {
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
-  padding-top: 72px;
-  padding-bottom: 48px;
 }
 
 .portfolio-galery-item {
-  border: 1px solid #e7e9fc;
   width: calc((100%-48) / 3);
 }
