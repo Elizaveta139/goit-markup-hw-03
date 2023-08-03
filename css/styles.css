@@ -28,15 +28,10 @@ p {
   margin-bottom: 0;
 }
 
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -48,6 +43,13 @@ img {
 
 .list {
   list-style-type: none;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .link {
@@ -78,7 +80,12 @@ img {
   border-bottom: 1px solid var(--border-tabs);
 }
 
+.header > .container-nav {
+  display: flex;
+}
+
 .logo-header {
+  display: inline-block;
   font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -86,22 +93,20 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-text);
-  margin: 25.5px 76px 25.5px 0;
+  padding: 25.5px 76px 25.5px 0;
 }
 
 .logo-header-two {
   color: var(--color-main-text);
 }
 
-.header .container-nav {
+.nav-header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header .nav-header {
-  display: flex;
-}
-
-.site-nav .link {
+.site-nav.link {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -110,8 +115,9 @@ img {
 }
 
 .site-nav {
-  margin: 24px 332px 24px 0;
+  padding: 24px 0;
   gap: 40px;
+  margin-right: 332px;
 }
 
 .site-nav .link:hover,
@@ -131,10 +137,11 @@ img {
 }
 
 .contacts {
+  display: flex;
   gap: 40px;
 }
 
-.site-contacts .link {
+.contacts .link {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -163,6 +170,8 @@ img {
   width: 1440px;
   height: 600px;
   flex-shrink: 0;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .hero-title {
@@ -171,12 +180,14 @@ img {
   line-height: 1.07;
   letter-spacing: 0.02em;
   width: 496px;
-  padding-top: 188px;
-  padding-bottom: 48px;
   margin: 0 auto;
+  margin-bottom: 48px;
 }
 
 .hero-button {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -185,13 +196,9 @@ img {
   color: var(--text-title);
   background-color: var(--accent-text);
   cursor: pointer;
-  display: inline-flex;
   padding: 16px 32px;
-  align-items: flex-start;
-  gap: 10px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  margin-top: 48px;
   margin-right: auto;
   margin-left: auto;
   min-width: 169px;
@@ -208,11 +215,12 @@ img {
   display: flex;
   flex-shrink: 0;
   padding: 0;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .features-section {
   text-align: left;
-  margin-top: 120px;
 }
 
 .features-list.features-list-item {
@@ -223,8 +231,8 @@ img {
 
 .features-list {
   display: flex;
-  width: calc((100%-72) / 4);
   gap: 24px;
+  width: calc((100%-72px) / 4);
 }
 
 .card-title {
@@ -233,7 +241,6 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--color-main-text);
-  padding-top: 32px;
   padding-bottom: 8px;
 }
 
@@ -242,7 +249,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-secondary-text);
-  padding-bottom: 32px;
 }
 
 /* What are we doing */
@@ -255,8 +261,9 @@ img {
   text-transform: capitalize;
   color: var(--color-main-text);
   text-align: center;
-  padding-bottom: 72px;
-  padding-top: 0;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 72px;
 }
 
 .activity-list {
@@ -270,17 +277,17 @@ img {
 }
 
 .section-activity {
-  margin-bottom: 120px;
-}
-
-.activity-container {
-  padding: 0;
+  padding-bottom: 120px;
 }
 
 /* Our Team */
 
 .section-team {
   background-color: var(--color-tertiary-text);
+}
+
+.team-container {
+  padding-bottom: 120px;
 }
 
 .team-list-item {
@@ -290,20 +297,22 @@ img {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-  margin-bottom: 120px;
 }
 
-.section-title {
-  padding-bottom: 72px;
+.team-title {
   padding-top: 120px;
+  margin-bottom: 72px;
 }
-
 .team-list {
   display: inline-flex;
   padding-bottom: 0px;
   justify-content: center;
   align-items: center;
   gap: 32px;
+}
+
+.team-text {
+  padding: 32px 16px;
 }
 
 .team-card-title {
@@ -313,8 +322,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--color-main-text);
   text-align: center;
-  padding-top: 32px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .team-card-text {
@@ -323,10 +331,6 @@ img {
   letter-spacing: 0.02em;
   color: var(--color-secondary-text);
   text-align: center;
-  padding-bottom: 32px;
-}
-.team-container {
-  padding: 0;
 }
 
 /**
@@ -342,6 +346,8 @@ img {
 }
 
 .logo-footer {
+  display: inline-block;
+  margin-bottom: 16px;
   font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -349,11 +355,9 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-text);
-  display: flex;
   width: 71px;
   flex-direction: row;
   padding-top: 101.5px;
-  padding-bottom: 17.5px;
 }
 
 .logo-footer-two {
@@ -379,7 +383,7 @@ img {
   display: flex;
   gap: 24px;
   justify-content: center;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .portfolio-tabs {
@@ -409,12 +413,19 @@ img {
 }
 
 .portfolio-container {
-  margin-top: 96px;
-  margin-bottom: 120px;
-  padding: 0;
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 
 /*  Galery */
+
+.portfolio-text {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border: 1px solid var(--border-tabs);
+  border-top: none;
+}
 
 .galery-title {
   font-size: 20px;
@@ -422,9 +433,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--color-main-text);
-  padding: 32px 0 8px 16px;
-  border-right: 1px solid #e7e9fc;
-  border-left: 1px solid #e7e9fc;
+  margin-bottom: 8px;
 }
 
 .galery-text {
@@ -432,11 +441,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-secondary-text);
-  padding-bottom: 32px;
-  padding-left: 16px;
-  border-right: 1px solid #e7e9fc;
-  border-left: 1px solid #e7e9fc;
-  border-bottom: 1px solid #e7e9fc;
 }
 
 .portfolio-galery {
@@ -444,8 +448,5 @@ img {
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
-}
-
-.portfolio-galery-item {
   width: calc((100%-48) / 3);
 }
