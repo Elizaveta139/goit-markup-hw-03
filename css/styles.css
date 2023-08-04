@@ -15,6 +15,7 @@ body {
   color: var(--color-secondary-text);
   background-color: var(--primary-bg-color);
   line-height: 1.5;
+  min-width: 1158px;
 }
 
 h1,
@@ -81,6 +82,8 @@ ol {
 
 .header > .container-nav {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo-header {
@@ -93,7 +96,6 @@ ol {
   text-transform: uppercase;
   color: var(--accent-text);
   margin-right: 76px;
-  padding: 25.5px 0;
 }
 
 .logo-header-two {
@@ -102,15 +104,15 @@ ol {
 
 .nav-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav-link {
   padding: 24px 0;
 }
 
-.site-nav.link {
+.nav-link {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -120,11 +122,10 @@ ol {
 
 .site-nav {
   gap: 40px;
-  margin-right: 332px;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-pressed);
 }
 
@@ -350,8 +351,6 @@ ol {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-text);
-  width: 71px;
-  flex-direction: row;
 }
 
 .logo-footer-two {
